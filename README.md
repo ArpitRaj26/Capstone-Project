@@ -71,11 +71,11 @@ Execute queries from `analysis.sql` in MySQL Workbench.
 ## Sample Queries
 
 ```
-SELECT customer_name, SUM(quantity) AS total_orders FROM orders GROUP BY customer_name;
+SELECT customer_id, SUM(quantity) AS total_orders FROM orders GROUP BY customer_id;
 
 SELECT product, SUM(quantity) AS total_sold FROM orders GROUP BY product ORDER BY total_sold DESC;
 
-SELECT order_date, COUNT(*) AS total_orders FROM orders GROUP BY order_date;
+SELECT product, SUM(quantity) AS total_sold FROM orders GROUP BY product ORDER BY total_sold DESC LIMIT 7;
 ```
 
 ---
